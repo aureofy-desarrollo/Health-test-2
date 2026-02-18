@@ -1,0 +1,229 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* medical_admission
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-01-13 19:50+0000\n"
+"PO-Revision-Date: 2026-01-13 19:50+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: medical_admission
+#: model:ir.actions.act_window,name:medical_admission.action_hospital_admission
+#: model:ir.ui.menu,name:medical_admission.menu_hospital_admission
+msgid "Admissions"
+msgstr "Admisiones"
+
+#. module: medical_admission
+#: model:ir.actions.act_window,name:medical_admission.action_hospital_patient
+#: model:ir.ui.menu,name:medical_admission.menu_hospital_patient
+msgid "Patients"
+msgstr "Pacientes"
+
+#. module: medical_admission
+#: model:ir.model.fields,field_description:medical_admission.field_hospital_admission__name
+msgid "Admission ID"
+msgstr "ID de Admisión"
+
+#. module: medical_admission
+#: model:ir.model,name:medical_admission.model_hospital_admission
+msgid "Hospital Admission"
+msgstr "Admisión Hospitalaria"
+
+#. module: medical_admission
+#: model:ir.model,name:medical_admission.model_hospital_patient
+msgid "Hospital Patient"
+msgstr "Paciente del Hospital"
+
+#. module: medical_admission
+#: model:ir.ui.menu,name:medical_admission.menu_hospital_root
+msgid "Hospital Management"
+msgstr "Gestión Hospitalaria"
+
+#. module: medical_admission
+#: model:ir.model.fields,field_description:medical_admission.field_hospital_patient__name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: medical_admission
+#: model:ir.model.fields,field_description:medical_admission.field_hospital_patient__date_of_birth
+msgid "Date of Birth"
+msgstr "Fecha de Nacimiento"
+
+#. module: medical_admission
+#: model:ir.model.fields,field_description:medical_admission.field_hospital_patient__gender
+msgid "Gender"
+msgstr "Género"
+
+#. module: medical_admission
+#: model:ir.model.fields,field_description:medical_admission.field_hospital_patient__id_number
+msgid "ID Number"
+msgstr "DNI / Documento"
+
+#. module: medical_admission
+#: model:ir.model.fields,field_description:medical_admission.field_hospital_patient__social_insurance_id
+msgid "Social Insurance / Provider"
+msgstr "Obra Social / Prepaga"
+
+#. module: medical_admission
+#: model:ir.model.fields,field_description:medical_admission.field_hospital_admission__patient_id
+msgid "Patient"
+msgstr "Paciente"
+
+#. module: medical_admission
+#: model:ir.model.fields,field_description:medical_admission.field_hospital_admission__urgency_level
+msgid "Urgency Level"
+msgstr "Nivel de Urgencia"
+
+#. module: medical_admission
+#: model:ir.model.fields,field_description:medical_admission.field_hospital_admission__triage_required
+msgid "Triage Required"
+msgstr "Requiere Triage"
+
+#. module: medical_admission
+#: model:ir.model.fields,field_description:medical_admission.field_hospital_admission__triage_notes
+msgid "Triage Notes"
+msgstr "Notas de Triage"
+
+#. module: medical_admission
+#: model:ir.model.fields,field_description:medical_admission.field_hospital_admission__has_social_insurance
+msgid "Has Social Insurance"
+msgstr "Tiene Obra Social"
+
+#. module: medical_admission
+#: model:ir.model.fields,field_description:medical_admission.field_hospital_admission__social_insurance_id
+msgid "Insurance Provider"
+msgstr "Proveedor de Seguro"
+
+#. module: medical_admission
+#: model:ir.model.fields,field_description:medical_admission.field_hospital_admission__has_appointment
+msgid "Has Appointment"
+msgstr "Tiene Turno"
+
+#. module: medical_admission
+#: model:ir.model.fields,field_description:medical_admission.field_hospital_admission__copayment_amount
+msgid "Copayment Amount"
+msgstr "Monto de Copago"
+
+#. module: medical_admission
+#: model:ir.model.fields,field_description:medical_admission.field_hospital_admission__state
+msgid "Status"
+msgstr "Estado"
+
+#. module: medical_admission
+#: model:ir.model.fields.selection,name:medical_admission.selection__hospital_patient__gender__male
+msgid "Male"
+msgstr "Masculino"
+
+#. module: medical_admission
+#: model:ir.model.fields.selection,name:medical_admission.selection__hospital_patient__gender__female
+msgid "Female"
+msgstr "Femenino"
+
+#. module: medical_admission
+#: model:ir.model.fields.selection,name:medical_admission.selection__hospital_patient__gender__other
+msgid "Other"
+msgstr "Otro"
+
+#. module: medical_admission
+#: model:ir.model.fields.selection,name:medical_admission.selection__hospital_admission__urgency_level__normal
+msgid "Normal"
+msgstr "Normal"
+
+#. module: medical_admission
+#: model:ir.model.fields.selection,name:medical_admission.selection__hospital_admission__urgency_level__urgent
+msgid "Urgent"
+msgstr "Urgente"
+
+#. module: medical_admission
+#: model:ir.model.fields.selection,name:medical_admission.selection__hospital_admission__urgency_level__emergency
+msgid "Emergency"
+msgstr "Emergencia"
+
+#. module: medical_admission
+#: model:ir.model.fields.selection,name:medical_admission.selection__hospital_admission__state__draft
+msgid "Draft"
+msgstr "Borrador"
+
+#. module: medical_admission
+#: model:ir.model.fields.selection,name:medical_admission.selection__hospital_admission__state__triage
+msgid "Triage"
+msgstr "Triage"
+
+#. module: medical_admission
+#: model:ir.model.fields.selection,name:medical_admission.selection__hospital_admission__state__admitted
+msgid "Admitted"
+msgstr "Admitido"
+
+#. module: medical_admission
+#: model:ir.model.fields.selection,name:medical_admission.selection__hospital_admission__state__done
+msgid "Done"
+msgstr "Finalizado"
+
+#. module: medical_admission
+#: model:ir.model.fields.selection,name:medical_admission.selection__hospital_admission__state__cancelled
+msgid "Cancelled"
+msgstr "Cancelado"
+
+#. module: medical_admission
+#: model:ir.ui.view,arch_db:medical_admission.view_hospital_admission_form
+msgid "Admit"
+msgstr "Admitir"
+
+#. module: medical_admission
+#: model:ir.ui.view,arch_db:medical_admission.view_hospital_admission_form
+msgid "Done"
+msgstr "Hecho"
+
+#. module: medical_admission
+#: model:ir.ui.view,arch_db:medical_admission.view_hospital_admission_form
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: medical_admission
+#: model:ir.ui.view,arch_db:medical_admission.view_hospital_admission_form
+msgid "Enter triage notes here..."
+msgstr "Ingrese notas de triage aquí..."
+
+#. module: medical_admission
+#: model:ir.actions.act_window,help:medical_admission.action_hospital_patient
+msgid "Register a new patient"
+msgstr "Registrar un nuevo paciente"
+
+#. module: medical_admission
+#: model:ir.actions.act_window,help:medical_admission.action_hospital_admission
+msgid "Register a new admission"
+msgstr "Registrar una nueva admisión"
+
+#. module: medical_admission
+#: model:ir.model.fields,field_description:medical_admission.field_hospital_admission__appointment_datetime
+msgid "Scheduled Time"
+msgstr "Horario del Turno"
+
+#. module: medical_admission
+#: model:ir.model.fields,field_description:medical_admission.field_hospital_admission__specialist_id
+msgid "Specialist"
+msgstr "Especialista"
+
+#. module: medical_admission
+#: model:ir.model,name:medical_admission.model_medical_specialty
+msgid "Medical Specialty"
+msgstr "Especialidad Médica"
+
+#. module: medical_admission
+#: model:ir.model.fields,field_description:medical_admission.field_medical_specialty__name
+msgid "Specialty Name"
+msgstr "Nombre de la Especialidad"
+
+#. module: medical_admission
+#: model:ir.actions.act_window,name:medical_admission.action_medical_specialty
+#: model:ir.ui.menu,name:medical_admission.menu_medical_specialty
+msgid "Specialties"
+msgstr "Especialidades"

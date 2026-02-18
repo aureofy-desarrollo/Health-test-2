@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_medical_inpatient_registration_tree" model="ir.ui.view">
+        <field name="name">medical.inpatient.registration.tree</field>
+        <field name="model">medical.inpatient.registration</field>
+        <field name="arch" type="xml">
+            <list string="Inpatient Registrations" decoration-info="state == 'draft'" decoration-success="state == 'hospitalized'" decoration-muted="state == 'discharged'">
+                <field name="name"/>
+                <field name="patient_id"/>
+                <field name="social_insurance_id"/>
+                <field name="start_date"/>
+                <field name="state" widget="badge" decoration-info="state == 'draft'" decoration-success="state == 'hospitalized'"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_medical_inpatient_registration_form" model="ir.ui.view">
+        <field name="name">medical.inpatient.registration.form</field>
+        <field name="model">medical.inpatient.registration</field>
+        <field name="arch" type="xml">
+            <form string="Inpatient Registration">
+                <header>
+                    <button name="action_hospitalize" string="Hospitalize" type="object" class="oe_highlight" invisible="state != 'draft'"/>
+                    <button name="action_discharge" string="Discharge" type="object" class="oe_highlight" invisible="state != 'hospitalized'"/>
+                    <button name="action_cancel" string="Cancel" type="object" invisible="state not in ['draft', 'hospitalized']"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,hospitalized,discharged"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" readonly="1"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="patient_id" placeholder="Select Patient..."/>
+                            <field name="social_insurance_id"/>
+                        </group>
+                        <group>
+                            <field name="start_date"/>
+                            <field name="end_date" invisible="state != 'discharged'"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page name="info" string="Information">
+                            <group>
+                                <field name="reason" placeholder="Describe the reason for hospitalization..."/>
+                            </group>
+                        </page>
+                        <page name="equipment" string="Equipment">
+                            <field name="equipment_ids">
+                                <list editable="bottom">
+                                    <field name="name"/>
+                                    <field name="description"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_medical_inpatient_registration" model="ir.actions.act_window">
+        <field name="name">Inpatient Registrations</field>
+        <field name="res_model">medical.inpatient.registration</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <!-- Inherit Patient List to show Hospitalization Status -->
+    <record id="view_hospital_patient_tree_inherit_inpatient" model="ir.ui.view">
+        <field name="name">hospital.patient.tree.inherit.inpatient</field>
+        <field name="model">hospital.patient</field>
+        <field name="inherit_id" ref="medical_admission.view_hospital_patient_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="is_hospitalized" widget="boolean_toggle"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

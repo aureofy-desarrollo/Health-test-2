@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Root Menu -->
+    <menuitem id="menu_medical_inpatient_root"
+              name="Hospitalization"
+              sequence="10"
+              web_icon="medical_inpatient,static/description/icon.png"/>
+
+    <!-- Submenus -->
+    <menuitem id="menu_medical_inpatient_main"
+              name="Hospitalization"
+              parent="menu_medical_inpatient_root"
+              sequence="10"/>
+
+    <menuitem id="menu_medical_inpatient_registration"
+              name="Inpatient Records"
+              parent="menu_medical_inpatient_main"
+              action="action_medical_inpatient_registration"
+              sequence="10"/>
+
+    <menuitem id="menu_medical_inpatient_patient"
+              name="Patients"
+              parent="menu_medical_inpatient_main"
+              action="medical_admission.action_hospital_patient"
+              sequence="20"/>
+
+    <!-- Configuration Menu -->
+    <menuitem id="menu_medical_inpatient_config"
+              name="Configuration"
+              parent="menu_medical_inpatient_root"
+              sequence="100"/>
+
+    <menuitem id="menu_medical_equipment"
+              name="Medical Equipment"
+              parent="menu_medical_inpatient_config"
+              action="action_medical_equipment"
+              sequence="10"/>
+</odoo>

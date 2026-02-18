@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="specialty_cardiologist" model="medical.specialty">
+            <field name="name">Cardiólogo</field>
+            <field name="description">Especialista en el corazón y el sistema circulatorio.</field>
+        </record>
+
+        <record id="specialty_neurologist" model="medical.specialty">
+            <field name="name">Neurólogo</field>
+            <field name="description">Especialista en el cerebro y el sistema nervioso.</field>
+        </record>
+    </data>
+</odoo>

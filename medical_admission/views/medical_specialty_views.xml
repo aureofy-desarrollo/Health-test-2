@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_medical_specialty_list" model="ir.ui.view">
+        <field name="name">medical.specialty.list</field>
+        <field name="model">medical.specialty</field>
+        <field name="arch" type="xml">
+            <list editable="bottom">
+                <field name="name"/>
+                <field name="description"/>
+                <field name="active" widget="boolean_toggle"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="action_medical_specialty" model="ir.actions.act_window">
+        <field name="name">Medical Specialties</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">medical.specialty</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+          <p class="o_view_nocontent_smiling_face">
+            Create a new medical specialty
+          </p><p>
+            Example: Cardiologist, Neurologist, etc.
+          </p>
+        </field>
+    </record>
+</odoo>

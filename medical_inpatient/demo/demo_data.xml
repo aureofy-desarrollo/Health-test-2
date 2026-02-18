@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Insurance Providers -->
+        <record id="insurance_swiss_medical" model="res.partner">
+            <field name="name">Swiss Medical</field>
+            <field name="is_company">True</field>
+        </record>
+
+        <record id="insurance_osde" model="res.partner">
+            <field name="name">OSDE</field>
+            <field name="is_company">True</field>
+        </record>
+
+        <!-- Patients -->
+        <record id="patient_john_doe" model="hospital.patient">
+            <field name="name">John Doe</field>
+            <field name="id_number">12345678</field>
+            <field name="gender">male</field>
+            <field name="date_of_birth">1985-05-15</field>
+            <field name="social_insurance_id" ref="insurance_osde"/>
+        </record>
+
+        <record id="patient_jane_smith" model="hospital.patient">
+            <field name="name">Jane Smith</field>
+            <field name="id_number">87654321</field>
+            <field name="gender">female</field>
+            <field name="date_of_birth">1992-10-20</field>
+            <field name="social_insurance_id" ref="insurance_swiss_medical"/>
+        </record>
+
+        <!-- Equipment -->
+        <record id="equipment_ventilator" model="medical.equipment">
+            <field name="name">Ventilador Mecánico</field>
+            <field name="description">Equipo para asistencia respiratoria.</field>
+        </record>
+
+        <record id="equipment_monitor" model="medical.equipment">
+            <field name="name">Monitor Multiparamétrico</field>
+            <field name="description">Para control de signos vitales.</field>
+        </record>
+
+        <record id="equipment_infusion_pump" model="medical.equipment">
+            <field name="name">Bomba de Infusión</field>
+            <field name="description">Para administración precisa de medicamentos.</field>
+        </record>
+
+        <!-- Sample Inpatient Registration -->
+        <record id="inpatient_john" model="medical.inpatient.registration">
+            <field name="patient_id" ref="patient_john_doe"/>
+            <field name="reason">Cirugía programada de rodilla</field>
+            <field name="start_date" eval="datetime.now().strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="state">hospitalized</field>
+            <field name="equipment_ids" eval="[(4, ref('equipment_monitor')), (4, ref('equipment_infusion_pump'))]"/>
+        </record>
+    </data>
+</odoo>
